@@ -1,2 +1,2 @@
-# RandomizerQuestions
-An app that show randomic questions
+# QuizAppJS
+An app that show randomic questions for study
