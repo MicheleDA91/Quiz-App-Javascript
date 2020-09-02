@@ -2,63 +2,31 @@
     box-sizing: border-box;
     font-family: Gotham rounded;
 }
-
-:root {
-    --hue-neutral: 200;
-    --hue-wrong: 20;
-    --hue-correct: 145;
-}
-
-body {
-    --hue: var(--hue-neutral);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
-}
-
-body.correct {
-    background-color: hsl(var(--hue-correct), 100%, 20%);
-}
-
-body.wrong {
-    background-color: hsl(var(--hue-wrong), 100%, 20%);
+h1 {
+   font-weight: bold;
+   margin-left: 550px;
 }
 
 .container {
     width: 400px;
+    height: 400px;
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
+    position: absolute;
     box-shadow: 0 0 10px 2px;
 }
 
-.btn {
-    --hue: var(--hue-neutral);
-    background-color: hsl(var(--hue), 100%, 50%);
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    outline: none;
-}
-
-.btn:hover {
-    border: gold;
-}
-
-.btn.correct {
-    --hue: var(--hue-correct);
-    color: black;
-}
-
-.btn.wrong {
-    --hue: var(--hue-wrong);
+body {
+    margin: 20;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color:lightblue;
+    justify-content: center;
+    align-items: center;
 }
 
 .start-btn, .next-btn {
@@ -66,8 +34,29 @@ body.wrong {
     font-size: 1rem;
     padding: 10px;
     border-radius: 5px;
+
+}
+
+.btn {
+  border: 1px solid black;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+}
+
+.controls {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display:none;
 }
 
 .question {
-    font-style: bold;
+    font-weight: bold;
+    font-size: 1.5rem;
 }

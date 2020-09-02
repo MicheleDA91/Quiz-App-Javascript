@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel='stylesheet'>
-    <script defer src='script.js'></script>
-    <title>Developer Quiz App</title>
+    <link rel='stylesheet' href='Styles.css' />
+    <script defer src='Script.js'></script>
+    <title>Quiz App</title>
 </head>
 <body>
-    <div class='container'>
-        <div id='question-container' class='hide'></div>
-        <div class='question' id='question'>Question:</div>
+     <div class='container'>
+        <div id='question-container' class='hide'>
+            <div id='question' class='question'></div>
             <br/>
-        <button class='answer-btn' id='answer-btn'>Risposta</button>
-     <div class='hide' id='answer'>Answer:</div>
-     </div>
-     <div class='controls'>
-        <button id='start-btn' class='start-btn'>Start</button>
-        <button id='next-btn' class='next-btn hide'>Next</button>
+            <button id='answer-btn' class='answer-btn'>Mostra Risposta</button>
+            <div id='answer'></div>
+        </div>
+        <div class='controls'>
+        <button id='start-btn' class='start-btn btn'>Start</button>
+        <button id='next-btn' class='next-btn btn hide'>Next</button>
+        </div>
+        <br/>
+        <div id='pointers' class='hide'>
+        <button class='right'></button>
+        <button class='wrong'></button>
+        <button class='skip'></button>
     </div>
-     
-    
-    </body>
+    </div>
+</body>
 </html>

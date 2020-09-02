@@ -1,37 +1,42 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
-const answerButton = document.getElementById('answer-btn')
 const questionContainer = document.getElementById('question-container')
+const pointersButtons = document.getElementById('pointers')
 const questionElement = document.getElementById('question')
 const answerElement = document.getElementById('answer')
+const answerButton = document.getElementById('answer-btn')
 
-let shuffledQuestions, currentQuestionIndex
+startButton.addEventListener('click', startGame)
+answerButton.addEventListener('click', showAnswer)
 
-startButton.addEventListener('click', startGame);
-answerButton.addEventListener('click', showAnswer);
-
+let shuffledQuestions, questionIndex
 
 function startGame() {
-   
-   startButton.classList.add('hide')
-   shuffledQuestions = questions.sort(() => Math.random() - 0.5)
-   currentQuestionIndex = 0;
    questionContainer.classList.remove('hide')
-   setNextQuestion();
+   pointersButtons.classList.remove('hide')
+   nextButton.classList.remove('hide')
+   startButton.classList.add('hide')
+   shuffledQuestions = questions.sort(() => Math.random() - .5)
+   questionIndex = 0;
+   setNextQuestion()
 }
 
 function setNextQuestion() {
-showQuestion(shuffledQuestions[currentQuestionIndex])
+   showQuestion(shuffledQuestions[questionIndex])
 }
 
-function showQuestion (question) {
- questionElement.innerText = question.question;
- answerElement.innerText = question.answer;
+function showQuestion(question) {
+questionElement.innerText = question.question
+answerElement.innerText = question.answer
+answerElement.classList.add('hide')
 }
 
 function showAnswer() {
- answerElement.classList.remove('hide')
+    answerElement.classList.remove('hide')
 }
+
+
+
 
 const questions = [
     {
@@ -76,6 +81,14 @@ const questions = [
 {
     question:'Inversion of control e Dependency Injection',
     answer:'Inversion of control è un pattern dove un componente di livello applicativo riceve il controllo da un componente appartenente ad una libreria riusabile. Tutto ciò differisce dalla programmazione procedurale classica poiché in quel caso il controllo viene passato alla procedura di libreria utilizzata.Vantaggi:\n• Rende le componenti software il più indipendenti possibili poiché posso modificarne una parte senza dover modificare le altre.\n• Le dipendenze possono essere iniettate dall’esterno.\nLa Dependency Injection è una delle tecniche con le quali si può attuare l’Inversion of Control. In pratica un programmatore può iniettare le dipendenze cioè richiamare l’istanza di un oggetto precedentemente creato, evitando quindi l’inizializzazione.'
+},
+{
+    question:'Polimorfismo (overload-override)',
+    answer:'@overload quando puoi costruire due metodi con lo stesso nome che possono avere return o parametri espliciti diversi (dati passati in un metodo). Come con un costruttore.\n@override operazione di sovrascrittura dei metodi per Interfaccia devi sovrascrivere i metodi che sono dichiarati nell’interfaccia.'
+},
+{
+    question:'JavaScript',
+    answer:'JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione Web lato client per la creazione, in siti web e applicazioni web, di effetti dinamici interattivi tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall utente sulla pagina web in uso (mouse, tastiera, caricamento della pagina ecc...).Tali funzioni di script, utilizzati dunque nella logica di presentazione, possono essere opportunamente inserite in file HTML, in pagine JSP o in appositi file separati con estensione .js poi richiamati nella logica di business.In JavaScript lato client, il codice viene eseguito direttamente sul client (browser) e non sul server. Il vantaggio di questo approccio è che, anche con la presenza di script particolarmente complessi, il web server non viene sovraccaricato a causa delle richieste dei client. Di contro, nel caso di script che presentino un codice sorgente particolarmente grande, il tempo per lo scaricamento può diventare abbastanza lungo.'
 } 
 
 ]
