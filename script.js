@@ -8,6 +8,7 @@ const answerButton = document.getElementById('answer-btn')
 
 startButton.addEventListener('click', startGame)
 answerButton.addEventListener('click', showAnswer)
+nextButton.addEventListener('click', startGame)
 
 let shuffledQuestions, questionIndex
 
