@@ -90,6 +90,34 @@ const questions = [
 {
     question:'JavaScript',
     answer:'JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione Web lato client per la creazione, in siti web e applicazioni web, di effetti dinamici interattivi tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall utente sulla pagina web in uso (mouse, tastiera, caricamento della pagina ecc...).Tali funzioni di script, utilizzati dunque nella logica di presentazione, possono essere opportunamente inserite in file HTML, in pagine JSP o in appositi file separati con estensione .js poi richiamati nella logica di business.In JavaScript lato client, il codice viene eseguito direttamente sul client (browser) e non sul server. Il vantaggio di questo approccio è che, anche con la presenza di script particolarmente complessi, il web server non viene sovraccaricato a causa delle richieste dei client. Di contro, nel caso di script che presentino un codice sorgente particolarmente grande, il tempo per lo scaricamento può diventare abbastanza lungo.'
+},
+{
+    question:'Differenza tra Prepared Statement e Statement',
+    answer:'In JDBC Statement è un'interfaccia. Utilizzando l'oggetto Statement possiamo inviare la nostra query SQL al database. Al momento della creazione di un oggetto Statement, non è necessario fornire alcuna query. L'oggetto istruzione può funzionare solo per query statiche.\nPrepared Statement è un'interfaccia disponibile nel pacchetto java.mysql. Estende l'interfaccia dell'istruzione.Vantaggi della dichiarazione preparata:\nPuò essere utilizzato per eseguire query SQL dinamiche e parametrizzate.\nPrepared Statement è più veloce dell'interfaccia Statement . Perché in Statement Query verrà compilato ed eseguito ogni volta, mentre in caso di Prepared Statement Query non verrà compilato ogni volta che appena eseguito.\n Può essere utilizzato per query sia statiche che dinamiche.\nIn caso di Prepared Statement nessuna possibilità di attacco SQL Injection. È una specie di problema nella programmazione del database.'
+},
+{
+    question:'Maven',
+    answer:'Apache Maven (build tool) è uno strumento di gestione di progetti software basati su Java e build automation. Maven usa un costrutto conosciuto come Project Object Model (POM): un file XML che descrive le dipendenze fra il progetto e le varie versioni di librerie necessarie nonché le dipendenze fra di esse. Per libreria/dipendenza si intente un file JAR contenente classi utilizzate in un progetto.Vantaggi di Maven:\n• Download automatico delle librerie dipendenti in una cartella locale .m2, nei sistemi Windows localizzata in C:\Utenti\NomeUtente\.m2\n• Separazione delle librerie dal progetto principale\n• Facilità di spostamento di un progetto da un ambiente all’altro poiché non è necessario portarsi dietro tutte le librerie poiché verranno automaticamente scaricate da Maven con le giuste versioni. '
+}, 
+{
+    question:'Quali sono i file di configurazione di Angular?',
+    answer:'I principali file di configurazione di Angular sono:\n • app-module: è il file dove sono definiti sia i componenti che i service. Tali componenti verranno inizializzati all’avvio dell’application e poi verranno iniettati col meccanismo della Dependency Injection così come avviene con Spring \n• app-routing: è un file che contiene le coppie “path – componente” necessarie a visualizzare i componenti \n• package.json: tale file viene letto quando si avvia il comando npm install e contiene tutte le dipendenze del progetto. Se si aggiunge una dipendenza al progetto Angular con il comando npm install [nomedipendenza] questo file verrà automaticamente aggiornato \n • angular.json: contiene le configurazioni principali dell’applicazione. E’ possibile specificare in tale file eventuali file .css e .js che si vuole inglobare nell’output finale dell’applicazione'
+}, 
+{
+    question:'Vantaggi di spring',
+    answer:' • Modularità. La struttura modulare del framework, che ad oggi si compone di oltre venti sottoprogetti, ne costituisce un altro punto di forza. In fase di progettazione potremo scegliere quali sono le funzionalità richieste dalla nostra applicazione e includere solamente i package necessari.\n • Flessibilità. Spring lascia ampia libertà allo sviluppatore riguardo al percorso da seguire per arrivare al risultato desiderato. I vincoli da rispettare sono veramente pochi. Spring ci consegna i mattoncini, sta a noi incastrarli nel modo che riteniamo più opportuno. \n• Testabilità. Aspetto spesso sottovalutato. Il cuore di Spring implementa un’architettura di tipo IoC (Inversion of Control), che permette di eliminare dal nostro codice dipendenze dirette tra le classi. Ne consegue un’elevata testabilità dei singoli componenti dell’applicazione.'
+}, 
+{
+    question:'',
+    answer:''
+}, 
+{
+    question:'',
+    answer:''
+}, 
+{
+    question:'',
+    answer:''
 } 
 
 ]
