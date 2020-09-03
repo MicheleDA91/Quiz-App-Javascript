@@ -127,6 +127,35 @@ const questions = [
 {
     question:'Vantaggi di spring',
     answer:' • Modularità. La struttura modulare del framework, che ad oggi si compone di oltre venti sottoprogetti, ne costituisce un altro punto di forza. In fase di progettazione potremo scegliere quali sono le funzionalità richieste dalla nostra applicazione e includere solamente i package necessari.\n • Flessibilità. Spring lascia ampia libertà allo sviluppatore riguardo al percorso da seguire per arrivare al risultato desiderato. I vincoli da rispettare sono veramente pochi. Spring ci consegna i mattoncini, sta a noi incastrarli nel modo che riteniamo più opportuno. \n• Testabilità. Aspetto spesso sottovalutato. Il cuore di Spring implementa un’architettura di tipo IoC (Inversion of Control), che permette di eliminare dal nostro codice dipendenze dirette tra le classi. Ne consegue un’elevata testabilità dei singoli componenti dell’applicazione.'
+},
+{
+    question:'Cos’ è un Observable?',
+    answer:'è un modello di progettazione software in cui un oggetto , chiamato soggetto , mantiene un elenco dei suoi dipendenti, chiamati osservatori , e li notifica automaticamente di eventuali cambiamenti di stato, di solito chiamando uno dei loro metodi .'
+},
+{
+    question:'Vantaggi e svantaggi di React.js',
+    answer:'Uno dei punti deboli di AngularJS è sicuramente la sua complessità. Di contro, con React Native lo sviluppo di nuovi componenti è relativamente semplice. Inoltre, l’intero ciclo di sviluppo risulta molto più rapido. Di fatto React Native è un’applicazione nativa, che interpreta la business logic scritta in JavaScript. Quindi non è necessario ricompilare l’intera applicazione ad ogni modifica del codice. Ma anche il Virtual DOM aiuta a risparmiare tempo, in quanto permette di calcolare qual è il minor numero di operazioni da effettuare per modificare il Dom. \nDal punto di vista delle performance, poi, React Native ha almeno un pregio rispetto ad AngularJS: si avvantaggia del fatto di non delegare alla WebView il rendering dell’interfaccia utente'
+},
+{
+    question:'Cos ‘è Git?',
+    answer:'Git è un controllo di versione. Considera i propri dati più come una serie di istantanee (snapshot) di un mini filesystem. Serve sostanzialmente per tenere traccia di tutte le modifiche relative ad un progetto attraverso i “commit”. Nel momento in cui fai un cambiamento lo salvi attraverso “add .”, tieni traccia del tuo cambiamento attraverso il “commit” e lo butti nel tuo branch attraverso la funzione “push”.Poiché hai l intera storia del progetto sul tuo disco locale, molte operazioni sembrano quasi istantanee. La prima cosa da ricordare sempre di Git se vuoi affrontare al meglio il processo di apprendimento è che i tuoi file in Git possono essere in tre stati: committed (committati), modified(modificati) e staged (in stage). Committato significa che il file è al sicuro nel database locale. Modificato significa che il file è stato modificato, ma non è ancora stato committato nel database. In stage significa che hai contrassegnato un file, modificato nella versione corrente, perché venga inserito nello snapshot alla prossima commit. La directory di Git è dove Git salva i metadati e il database degli oggetti del tuo progetto. Questa è la parte più importante di Git, ed è ciò che viene copiato quando si clona un repository da un altro computer. Git add . serve per iniziare a tracciare un nuovo file. Se adesso fai git commit lo stato del file dopo “add .” sarà nella cronologia degli stati di git. Continous integration : tutti I membri si allineano con l’ambiente condiviso (GIT) Continous delivery: creiamo tanto prototipi in maniera che il cliente possa seguire lo state dell’arte. '
+},
+{
+    question:'Cos è Hibernate?',
+    answer:'è an object-relational mapping tool che gestisce la persistenza dei dati sul DB attraverso la rappresentazione e il mantenimento sul db relazionale di un sistema di oggetti Java.\n I vantaggi di utilizzarlo sono:\n • Offre la possibilità di gestire la persistenza in Java senza preoccuparsi del tipo di DB sottostante: basta cambiare una stringa di configurazione ed è possibile cambiare il tipo di DB.\n • Offre il linguaggio HQL (Hibernate Query Language) che estende il linguaggio JPQL (Java Persistence API Language).\n Gli svantaggi stanno nel fatto di non poter utilizzare stored procedure o functions altrimenti di perde la portabilità.\nE’ possibile effettuare una query in diversi modi:\n • Query native scritte nel linguaggio del RDBMS -> non portabili \n• Query in HQL (Hibernate Query Language) -> portabili\n• Query dinamiche, dette anche criteria query -> portabili '
+},
+{
+    question: 'Servizi REST',
+    answer:'Realizzano l’architettura client-server per scambiare dati usando il protocollo http. Infatti i metodi di trasmissione in un REST controller Spring sono GET, POST, PUT E DELETE.\n L’annotazione @Requestmapping si prende sia il valore (ossia la parte di percorso per raggiungere la funzione) che il metodo (method = RequestMethod.POST) che gli passi. Per passare i parametri utilizzo l’annotazione @RequestParam. L’annotazione @CrossOrigin è un’annotazione di sicurezza che ci permette di comunicare con più domini (porte localhost).\n JSON è un formato utilizzato per lo scambio di dati nei servizi REST. Per le persone è facile da leggere e scrivere, mentre per le macchine risulta facile da generare e analizzarne la sintassi.'
+},
+{
+    question:'Vantaggi e Svantaggi dei microservizi',
+    answer:'I vantaggi dei microservizi sono:\n• Se un microservizio cede, non cade tutto il sistema.\n • L’implementazione di un microservizio non è legata a nessun linguaggio di programmazione specifico: si può utilizzare qualsiasi linguaggio di programmazione che sia in grado di creare servizi REST.\nSvantaggi dei microservizi:\nSe i microservizi non sono debolmente accoppiati, quindi ho che un microservizio chiama spesso un altro microservizio, all’aumentare del numero di richieste avrò un degrado notevole di prestazioni.   '
+},
+{
+    question:'Modificatori final e static',
+    answer:'Esistono 2 tipi di modificatori:\n• static: può essere applicato a classi, metodi o variabili. o Se applicato ad una classe: non è necessario istanziarla per utilizzare metodi e attributi al suo interno. Non ha costruttore, né return. o Se applicato a variabili posso accedervi direttamente con la sintassi nomeclasse.nomevabile senza istanziare l’oggetto o Se applicato a metodi significa che i metodi sono accessibili sempre senza istanziare la classe che li contiene. Ad esempio per chiamare un metodo statico scrivo nomeclasse.nomemetodo()\n• final: può essere applicata a classi, metodi, o variabili.  o se applicato a classe allora la classe non può essere estesa o Se applicata a variabili è utile quando si vuole che una variabile memorizzi sempre lo stesso valore o Se applicato a metodi questi non possono essere estesi'
 }
+
 
 ]
