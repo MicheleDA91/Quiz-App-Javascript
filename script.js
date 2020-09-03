@@ -6,6 +6,7 @@ const pointersButtons = document.getElementById('pointers')
 const questionElement = document.getElementById('question')
 const answerElement = document.getElementById('answer')
 const answerButton = document.getElementById('answer-btn')
+const gameOverElement = document.getElementById('gameover')
 
 startButton.addEventListener('click', startGame)
 answerButton.addEventListener('click', showAnswer)
@@ -57,6 +58,13 @@ function showAnswer() {
     answerElement.classList.remove('hide')
 }
 
+function gameOver() {
+    if (totali.value === 20) {
+     gameOverElement.classList.remove('hide')
+     startButton.classList.remove('hide')
+    }
+}
+
 
 
 
@@ -72,12 +80,12 @@ const questions = [
          
 }, 
 {
-    question: 'Perchè hai usato Bootstrap?',
+    question: 'Perchè usare Bootstrap?',
     answer:"Bootstrap è un toolkit per la creazione di interfacce grafiche. Per funzionare ha bisogno di:\n• JQuery: una libreria javascript\n• Popper.js: un’altra libreria  \n • Un file css che contiene tutte le classi utilizzabili nei tag html.\n I vantaggi di Bootstrap sono:\n • se usato crea automaticamente siti responsive, quindi che si adattano a tutti gli schermi dei più svariati dispositivi.\n• Introduce un layout a griglia composto da 12 colonne che si attiva scrivendo la seguente struttura HTML. Nella figura sottostante il numero di colonne da occupare per ogni div è specificato nell’attributo class (col-sm-4: indica 4 colonne. Il numero totale deve fare sempre 12. In questo caso 4x3=12) "
          
 }, 
 {
-    question: 'Perchè hai usato angular?',
+    question: 'Perchè usare angular?',
     answer:"Angular è un framework open source per lo sviluppo di applicazioni web.Vantaggi di Angular:\n • Viene usato per la creazione di Single-Page Applications (un’applicazione web o un sito web che può essere usato o consultato su una singola pagina web con l’obiettivo di fornire una esperienza utente più fluida e simile alle applicazioni desktop dei sistemi operativi tradizionali).\n • ogni applicazione è eseguita all’interno del browser e non viene mai ricaricata poiché ogni modifica dell’interfaccia grafica avviene a livello DOM (Document Object Model). Così facendo si evita la spedizione dell’intera pagina da server a browser, inviando così solo i componenti che si modificano.\n • Utilizzando toolkit come Angular Material o Bootstrap è possibile realizzare siti responsive, ossia il design del sito web si adatta in funzione alle dimensioni del dispositivo utilizzato.\n • carica i dati asincronicamente: l’interfaccia grafica non resta in attesa dei dati, ma viene prima costruita e poi caricata con dati."
          
 }, 
