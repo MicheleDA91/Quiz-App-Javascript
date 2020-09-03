@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,33 @@
     <script defer src='Script.js'></script>
     <title>Quiz App</title>
 </head>
+
 <body>
-     <div class='container'>
+       <div class='container'>
         <div id='question-container' class='hide'>
             <div id='question' class='question'></div>
-            <br/>
+            <br />
             <button id='answer-btn' class='answer-btn'>Mostra Risposta</button>
             <div id='answer'></div>
         </div>
         <div class='controls'>
-        <button id='start-btn' class='start-btn btn'>Start</button>
-        <button id='next-btn' class='next-btn btn hide'>Next</button>
+            <button id='start-btn' class='start-btn btn'>Start</button>
+            <button id='next-btn' class='next-btn btn hide'>Next</button>
         </div>
-        <br/>
+        <br />
         <div id='pointers' class='hide'>
-        <button class='right'></button>
-        <button class='wrong'></button>
-        <button class='skip'></button>
+            <button id='right' class='right'>✔</button>
+            <button id='wrong' class='wrong'>✘</button>
+            <button id='skip' class='skip'>?</button>
+        </div>
     </div>
+    <div id='scoreboard' class='scoreboard hide'>
+        <div class='scoretitle'>PUNTEGGIO</div>
+        <p><input type='number' value='0' id='corrette'/> Corrette </p>
+        <p><input type='number' value='0' id='errate'/> Sbagliate </p>
+        <p><input type='number' value='0' id='skippate'/> Saltate </p>
+        <p><input type='number' value='0' id='totali'/> TOTALI </p>
     </div>
 </body>
+
 </html>

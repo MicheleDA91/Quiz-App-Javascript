@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainer = document.getElementById('question-container')
+const scoreboardContainer = document.getElementById('scoreboard')
 const pointersButtons = document.getElementById('pointers')
 const questionElement = document.getElementById('question')
 const answerElement = document.getElementById('answer')
@@ -11,12 +12,32 @@ answerButton.addEventListener('click', showAnswer)
 nextButton.addEventListener('click', startGame)
 
 let shuffledQuestions, questionIndex
+let btnright = document.getElementById('right')
+let btnwrong = document.getElementById('wrong')
+let btnskip = document.getElementById('skip')
+
+btnright.addEventListener('click', () => {
+    corrette.value = parseInt(corrette.value) + 1;
+    totali.value = parseInt(totali.value) +1; 
+})
+
+btnwrong.addEventListener('click', () => {
+    errate.value = parseInt(errate.value) + 1;
+    totali.value = parseInt(totali.value) +1; 
+})
+
+btnskip.addEventListener('click', () => {
+    skippate.value = parseInt(skippate.value) + 1;
+    totali.value = parseInt(totali.value) +1; 
+})
+
 
 function startGame() {
    questionContainer.classList.remove('hide')
    pointersButtons.classList.remove('hide')
    nextButton.classList.remove('hide')
    startButton.classList.add('hide')
+   scoreboardContainer.classList.remove('hide')
    shuffledQuestions = questions.sort(() => Math.random() - .5)
    questionIndex = 0;
    setNextQuestion()
@@ -93,10 +114,10 @@ const questions = [
 },
 {
     question:'Differenza tra Prepared Statement e Statement',
-    answer:'In JDBC Statement è un'interfaccia. Utilizzando l'oggetto Statement possiamo inviare la nostra query SQL al database. Al momento della creazione di un oggetto Statement, non è necessario fornire alcuna query. L'oggetto istruzione può funzionare solo per query statiche.\nPrepared Statement è un'interfaccia disponibile nel pacchetto java.mysql. Estende l'interfaccia dell'istruzione.Vantaggi della dichiarazione preparata:\nPuò essere utilizzato per eseguire query SQL dinamiche e parametrizzate.\nPrepared Statement è più veloce dell'interfaccia Statement . Perché in Statement Query verrà compilato ed eseguito ogni volta, mentre in caso di Prepared Statement Query non verrà compilato ogni volta che appena eseguito.\n Può essere utilizzato per query sia statiche che dinamiche.\nIn caso di Prepared Statement nessuna possibilità di attacco SQL Injection. È una specie di problema nella programmazione del database.'
+    answer:'In JDBC Statement è un interfaccia. Utilizzando l oggetto Statement possiamo inviare la nostra query SQL al database. Al momento della creazione di un oggetto Statement, non è necessario fornire alcuna query. L oggetto istruzione può funzionare solo per query statiche.\nPrepared Statement è un interfaccia disponibile nel pacchetto java.mysql. Estende l interfaccia dell istruzione.Vantaggi della dichiarazione preparata:\nPuò essere utilizzato per eseguire query SQL dinamiche e parametrizzate.\nPrepared Statement è più veloce dell interfaccia Statement . Perché in Statement Query verrà compilato ed eseguito ogni volta, mentre in caso di Prepared Statement Query non verrà compilato ogni volta che appena eseguito.\n Può essere utilizzato per query sia statiche che dinamiche.\nIn caso di Prepared Statement nessuna possibilità di attacco SQL Injection. È una specie di problema nella programmazione del database.'
 },
 {
-    question:'Maven',
+    question:'Apache Maven',
     answer:'Apache Maven (build tool) è uno strumento di gestione di progetti software basati su Java e build automation. Maven usa un costrutto conosciuto come Project Object Model (POM): un file XML che descrive le dipendenze fra il progetto e le varie versioni di librerie necessarie nonché le dipendenze fra di esse. Per libreria/dipendenza si intente un file JAR contenente classi utilizzate in un progetto.Vantaggi di Maven:\n• Download automatico delle librerie dipendenti in una cartella locale .m2, nei sistemi Windows localizzata in C:\Utenti\NomeUtente\.m2\n• Separazione delle librerie dal progetto principale\n• Facilità di spostamento di un progetto da un ambiente all’altro poiché non è necessario portarsi dietro tutte le librerie poiché verranno automaticamente scaricate da Maven con le giuste versioni. '
 }, 
 {
@@ -106,18 +127,6 @@ const questions = [
 {
     question:'Vantaggi di spring',
     answer:' • Modularità. La struttura modulare del framework, che ad oggi si compone di oltre venti sottoprogetti, ne costituisce un altro punto di forza. In fase di progettazione potremo scegliere quali sono le funzionalità richieste dalla nostra applicazione e includere solamente i package necessari.\n • Flessibilità. Spring lascia ampia libertà allo sviluppatore riguardo al percorso da seguire per arrivare al risultato desiderato. I vincoli da rispettare sono veramente pochi. Spring ci consegna i mattoncini, sta a noi incastrarli nel modo che riteniamo più opportuno. \n• Testabilità. Aspetto spesso sottovalutato. Il cuore di Spring implementa un’architettura di tipo IoC (Inversion of Control), che permette di eliminare dal nostro codice dipendenze dirette tra le classi. Ne consegue un’elevata testabilità dei singoli componenti dell’applicazione.'
-}, 
-{
-    question:'',
-    answer:''
-}, 
-{
-    question:'',
-    answer:''
-}, 
-{
-    question:'',
-    answer:''
-} 
+}
 
 ]

@@ -2,10 +2,6 @@
     box-sizing: border-box;
     font-family: Gotham rounded;
 }
-h1 {
-   font-weight: bold;
-   margin-left: 550px;
-}
 
 .container {
     width: 400px;
@@ -18,14 +14,14 @@ h1 {
 }
 
 body {
-    margin: 20;
+    margin-top: 200px;
+    margin-left:400px;
     padding: 0;
     display: flex;
     width: 100vw;
     height: 100vh;
     background-color:lightblue;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .start-btn, .next-btn {
@@ -58,4 +54,39 @@ body {
 .question {
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+.right  {
+    border-radius: 50px;
+    background-color: lightgreen;
+}
+
+.wrong  {
+    border-radius: 50px;
+    background-color: red;
+}
+
+.skip  {
+    border-radius: 50px;
+    background-color: yellow;
+}
+
+.scoreboard {
+    position: relative;
+    margin-left: 500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    height: 180px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.scoretitle {
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    width: 30px;
 }
